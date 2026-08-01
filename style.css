@@ -1,0 +1,263 @@
+/* ================= RESET ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI, Tahoma, Geneva, Verdana, sans-serif;
+    background:#ffffff;
+    color:#333;
+    line-height:1.6;
+    padding:0 8%;
+}
+
+/* ================= NAVIGATION ================= */
+
+header{
+    padding:25px 0;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:1.4rem;
+    font-weight:bold;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+.nav-links a:hover{
+    color:#2b56d4;
+}
+
+/* ================= HAMBURGER ================= */
+
+.nav-toggle{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+
+.nav-toggle span{
+    width:25px;
+    height:3px;
+    background:#333;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    margin:80px 0;
+}
+
+.hero-text{
+    flex:1;
+}
+
+.hero-text h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#2b56d4;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    color:#666;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#2b56d4;
+    color:white;
+    padding:12px 25px;
+    border-radius:6px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#18368f;
+}
+
+.hero-image img{
+    width:350px;
+    border-radius:15px;
+}
+
+/* ================= SECTIONS ================= */
+
+section{
+    margin-bottom:80px;
+}
+
+section h2{
+    margin-bottom:20px;
+    color:#2b56d4;
+}
+
+/* ================= SKILLS ================= */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:20px;
+    transition:.3s;
+}
+
+.skill-card:hover{
+    transform:translateY(-6px);
+}
+
+.skill-card h3{
+    margin-bottom:10px;
+}
+
+/* ================= PROJECTS ================= */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    overflow:hidden;
+    background:white;
+    transition:.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.project-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+.project-content p{
+    color:#666;
+    margin-bottom:10px;
+}
+
+.tags{
+    display:block;
+    margin-bottom:15px;
+    color:#888;
+    font-size:.9rem;
+}
+
+.project-link{
+    text-decoration:none;
+    color:#2b56d4;
+    font-weight:bold;
+}
+
+.project-link:hover{
+    text-decoration:underline;
+}
+
+/* ================= CONTACT ================= */
+
+.email-link{
+    color:#2b56d4;
+}
+
+.email-link:hover{
+    text-decoration:none;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:1px solid #ddd;
+    text-align:center;
+    padding:30px 0;
+    color:#888;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+    body{
+        padding:0 5%;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero-image img{
+        width:260px;
+    }
+
+    .nav-toggle{
+        display:flex;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        right:5%;
+        top:75px;
+        flex-direction:column;
+        background:white;
+        border:1px solid #ddd;
+        border-radius:10px;
+        padding:20px;
+        width:200px;
+        box-shadow:0 5px 15px rgba(0,0,0,.15);
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
